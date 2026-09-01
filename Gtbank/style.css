@@ -1,0 +1,30 @@
+body{
+    background-color: whitesmoke;
+    
+}
+.logo{
+    position: relative;
+background-color: orangered;
+justify-self: center;
+margin-top: 100px;
+width: 300PX;
+height: 250PX;
+}
+.logo2{
+    position: absolute;
+margin: 50px 0px 0px 200px;
+    width: 60px;
+    height: 70px ;
+    background-color: white;
+}
+.text{
+    position: absolute;
+    margin: 150px 0px 0px 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-weight: 500;
+    color: white;
+}
+.motto{
+    padding-left: 500px;
+}

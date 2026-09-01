@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+}
+.whitebox{
+    position: relative;
+background-color: white;
+width:400px;
+height: 430px;
+margin:auto ;
+}
+.redbox{
+    position: absolute;
+margin: 10px 0px 500px 20px;
+    width: 350px;
+    height: 400px ;
+    background-color: red;
+}
+.logo{
+ position: absolute;
+ margin: 110px 0px 0px 250px;
+}
+.text{
+    position: absolute;
+color: white;
+margin: 190px 0px 0px 40px;
+font-size: 7rem;
+font-weight: 7rem;
+}
+.text2{
+    position: absolute;
+    color: white;
+    margin: 300px 0px 0px 50px;
+    font-size:2rem ;
+    font-weight: 200;
+}
