@@ -1,30 +1,188 @@
-body{
-    background-color: whitesmoke;
-    
+:root {
+    --bg-color: #0d1117;
+    --surface-color: #161b22;
+    --border-color: #30363d;
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --gtb-orange: orangered;
 }
-.gtlogo{
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.gtbody {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 32px;
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-back {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-back:hover {
+    color: var(--gtb-orange);
+}
+
+.nav-switcher {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.switcher-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link.active {
+    color: #ffffff;
+    background-color: var(--gtb-orange);
+}
+
+/* Main Content Layout */
+.content-container {
+    flex: 1;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.showcase-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    width: 100%;
+    padding: 60px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* GTBank Logo Geometry */
+.gtlogo {
     position: relative;
-background-color: orangered;
-justify-self: center;
-margin-top: 100px;
-width: 300PX;
-height: 250PX;
+    background-color: var(--gtb-orange);
+    width: 300px;
+    height: 250px;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(255, 69, 0, 0.25);
 }
-.gtlogo2{
+
+.gtlogo2 {
     position: absolute;
-margin: 50px 0px 0px 200px;
+    top: 50px;
+    right: 40px;
     width: 60px;
-    height: 70px ;
-    background-color: white;
+    height: 70px;
+    background-color: #ffffff;
 }
-.gttext{
+
+.gttext {
     position: absolute;
-    margin: 150px 0px 0px 100px;
+    bottom: 45px;
+    left: 40px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 35px;
     font-weight: 500;
-    color: white;
+    color: #ffffff;
+    letter-spacing: -0.5px;
 }
-.gtmotto{
-    padding-left: 500px;
+
+.gtmotto {
+    margin-top: 36px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    letter-spacing: -0.01em;
+}
+
+/* Details Card */
+.details-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    width: 100%;
+    padding: 28px 32px;
+}
+
+.details-section h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 0.95rem;
+}
+
+.detail-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.detail-value {
+    color: var(--text-primary);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.color-swatch {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
 }
