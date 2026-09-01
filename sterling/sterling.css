@@ -1,34 +1,196 @@
-body{
-background-color: black;
+:root {
+    --bg-color: #0d1117;
+    --surface-color: #161b22;
+    --border-color: #30363d;
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --sterling-red: #e50914;
 }
-.sterwhitebox{
-    /* position: relative; */
-width:400px ;
-height:300px ;
-background-color: white;
-justify-self: center;
-margin-top: 100px;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.sterlogo{
-    position:absolute;
-background-color: red;
-width: 150px ;
-height: 150px ;
-margin: 30px 0px 100px 0px;
-border-radius: 900px;
+
+body.sterbody {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-.sterlogo2{
+
+/* Header Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 32px;
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-back {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-back:hover {
+    color: var(--sterling-red);
+}
+
+.nav-switcher {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.switcher-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link.active {
+    color: #ffffff;
+    background-color: var(--sterling-red);
+}
+
+/* Main Content Layout */
+.content-container {
+    flex: 1;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.showcase-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    width: 100%;
+    padding: 60px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Sterling White Container Box */
+.sterwhitebox {
+    width: 420px;
+    min-height: 280px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Red outer circle */
+.sterlogo {
+    width: 130px;
+    height: 130px;
+    background-color: var(--sterling-red);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+/* Inner white circle offset cutout */
+.sterlogo2 {
+    width: 52px;
+    height: 52px;
+    background-color: #ffffff;
+    border-radius: 50%;
     position: absolute;
- background-color: white;
- width: 60px;
- height: 60px;
- margin:50px 0px 100px 70px ;
- border-radius: 500%;
- 
+    top: 20px;
+    left: 48px;
 }
-.stertext{
-position: absolute;
-margin: 200px 0px 0px 0px;
-font-size: 4rem;
-font-weight: 5rem;
+
+/* Brand Text */
+.stertext {
+    color: #111827;
+    font-size: 2.25rem;
+    font-weight: 700;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+/* Details Card */
+.details-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    width: 100%;
+    padding: 28px 32px;
+}
+
+.details-section h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 0.95rem;
+}
+
+.detail-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.detail-value {
+    color: var(--text-primary);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.color-swatch {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
 }

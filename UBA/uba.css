@@ -1,35 +1,205 @@
-body{
-    background-color: black;
+:root {
+    --bg-color: #0d1117;
+    --surface-color: #161b22;
+    --border-color: #30363d;
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --uba-red: #d32f2f;
 }
-.whitebox{
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 32px;
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-back {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-back:hover {
+    color: var(--uba-red);
+}
+
+.nav-switcher {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.switcher-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link.active {
+    color: #ffffff;
+    background-color: var(--uba-red);
+}
+
+/* Main Content Layout */
+.content-container {
+    flex: 1;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.showcase-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    width: 100%;
+    padding: 60px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* UBA White Outer Box */
+.whitebox {
+    background-color: #ffffff;
+    width: 380px;
+    height: 420px;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* UBA Red Card Inner Block */
+.redbox {
     position: relative;
-background-color: white;
-width:400px;
-height: 430px;
-margin:auto ;
+    background-color: #e50914;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
-.redbox{
+
+.logo {
     position: absolute;
-margin: 10px 0px 500px 20px;
-    width: 350px;
-    height: 400px ;
-    background-color: red;
+    top: 24px;
+    right: 24px;
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
 }
-.logo{
- position: absolute;
- margin: 110px 0px 0px 250px;
+
+.text {
+    color: #ffffff;
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-bottom: 8px;
 }
-.text{
-    position: absolute;
-color: white;
-margin: 190px 0px 0px 40px;
-font-size: 7rem;
-font-weight: 7rem;
+
+.text2 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
+    opacity: 0.95;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
-.text2{
-    position: absolute;
-    color: white;
-    margin: 300px 0px 0px 50px;
-    font-size:2rem ;
-    font-weight: 200;
+
+/* Details Card */
+.details-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    width: 100%;
+    padding: 28px 32px;
+}
+
+.details-section h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 0.95rem;
+}
+
+.detail-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.detail-value {
+    color: var(--text-primary);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.color-swatch {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
 }
