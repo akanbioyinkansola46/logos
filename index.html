@@ -3,23 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nigerian Banks Logo Gallery</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Nigerian Bank Logos Gallery</title>
     <style>
-        :root {
-            --bg-color: #0d1117;
-            --surface-color: #161b22;
-            --surface-hover: #1c2128;
-            --border-color: #30363d;
-            --text-primary: #f0f6fc;
-            --text-secondary: #8b949e;
-            --gtb-accent: #ff4500;
-            --sterling-accent: #e50914;
-            --uba-accent: #d32f2f;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -27,333 +12,110 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            line-height: 1.5;
-        }
-
-        header {
-            padding: 60px 24px 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f9;
+            color: #333333;
+            padding: 40px 20px;
             text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 6px 16px;
-            background-color: #21262d;
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #58a6ff;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 2.75rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
-            color: var(--text-primary);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #111111;
         }
 
         p.subtitle {
             font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 600px;
+            color: #666666;
+            margin-bottom: 40px;
+        }
+
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        main {
-            flex: 1;
-            max-width: 1100px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 20px 24px 80px;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 28px;
-        }
-
-        .card {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            overflow: hidden;
+        .bank-card {
+            background-color: #ffffff;
+            border: 2px solid #dddddd;
+            border-radius: 10px;
+            width: 250px;
+            padding: 25px 20px;
             text-decoration: none;
             color: inherit;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-            position: relative;
+            transition: transform 0.2s, border-color 0.2s;
         }
 
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: #8b949e;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+        .bank-card:hover {
+            transform: translateY(-5px);
+            border-color: #007bff;
         }
 
-        .card-preview {
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #010409;
-            position: relative;
-            border-bottom: 1px solid var(--border-color);
+        .bank-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
 
-        /* Minimal Mini Logos for Cards */
-        /* GTBank Mini */
-        .gtb-mini {
-            width: 100px;
-            height: 90px;
-            background-color: var(--gtb-accent);
-            position: relative;
-            display: flex;
-            align-items: flex-end;
-            padding: 12px;
-            box-sizing: border-box;
-            border-radius: 4px;
+        .gt-title {
+            color: orangered;
         }
 
-        .gtb-mini-sq {
-            position: absolute;
-            top: 14px;
-            right: 14px;
-            width: 22px;
-            height: 24px;
-            background-color: #ffffff;
+        .sterling-title {
+            color: #e50914;
         }
 
-        .gtb-mini-text {
-            color: #ffffff;
-            font-family: serif;
-            font-weight: 700;
-            font-size: 15px;
+        .uba-title {
+            color: #d32f2f;
         }
 
-        /* Sterling Mini */
-        .sterling-mini-box {
-            width: 140px;
-            height: 100px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .sterling-mini-icon {
-            width: 44px;
-            height: 44px;
-            background-color: var(--sterling-accent);
-            border-radius: 50%;
-            position: relative;
-        }
-
-        .sterling-mini-icon::after {
-            content: '';
-            position: absolute;
-            top: 6px;
-            left: 14px;
-            width: 18px;
-            height: 18px;
-            background-color: #ffffff;
-            border-radius: 50%;
-        }
-
-        .sterling-mini-text {
-            color: #000000;
-            font-size: 13px;
-            font-weight: 700;
-        }
-
-        /* UBA Mini */
-        .uba-mini-box {
-            width: 140px;
-            height: 100px;
-            background-color: var(--uba-accent);
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-            font-weight: 800;
-        }
-
-        .uba-mini-title {
-            font-size: 28px;
-            letter-spacing: 1px;
-            line-height: 1;
-        }
-
-        .uba-mini-sub {
-            font-size: 8px;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-top: 4px;
-            opacity: 0.9;
-        }
-
-        .card-body {
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-
-        .card-title-wrap {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 8px;
-        }
-
-        .card-title {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-
-        .card-tag {
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 3px 8px;
-            border-radius: 6px;
-            background-color: #21262d;
-            color: var(--text-secondary);
-        }
-
-        .card-description {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
+        .bank-desc {
+            font-size: 0.95rem;
+            color: #555555;
             margin-bottom: 20px;
-            flex: 1;
         }
 
-        .card-action {
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: color 0.2s ease;
-        }
-
-        .gt-action { color: var(--gtb-accent); }
-        .sterling-action { color: #f87171; }
-        .uba-action { color: #ef4444; }
-
-        .arrow-icon {
+        .btn-link {
             display: inline-block;
-            transition: transform 0.2s ease;
+            padding: 8px 16px;
+            background-color: #333333;
+            color: #ffffff;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: bold;
         }
 
-        .card:hover .arrow-icon {
-            transform: translateX(4px);
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-secondary);
-            font-size: 0.85rem;
+        .bank-card:hover .btn-link {
+            background-color: #007bff;
         }
     </style>
 </head>
-<body class="home-body">
-    <header>
-        <div class="badge">Brand Identity Showcase</div>
-        <h1>Nigerian Banks Logo Gallery</h1>
-        <p class="subtitle">A curated collection of precision visual recreations and brand identities for major Nigerian financial institutions.</p>
-    </header>
+<body>
+    <h1>NIGERIAN BANK LOGOS GALLERY</h1>
+    <p class="subtitle">Click on any bank below to view its logo design page.</p>
 
-    <main>
-        <div class="gallery-grid">
-            <!-- GTBANK CARD -->
-            <a href="./Gtbank/gtb.html" class="card">
-                <div class="card-preview">
-                    <div class="gtb-mini">
-                        <div class="gtb-mini-sq"></div>
-                        <span class="gtb-mini-text">GTBank</span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="card-title-wrap">
-                        <h2 class="card-title">GTBank</h2>
-                        <span class="card-tag">Orange & White</span>
-                    </div>
-                    <p class="card-description">Guaranty Trust Bank visual logo construct, typography, and orange brand identity.</p>
-                    <div class="card-action gt-action">
-                        <span>View Design</span>
-                        <span class="arrow-icon">&rarr;</span>
-                    </div>
-                </div>
-            </a>
+    <div class="gallery-container">
+        <a href="./Gtbank/gtb.html" class="bank-card">
+            <h2 class="bank-title gt-title">GTBank</h2>
+            <p class="bank-desc">Guaranty Trust Bank Logo Design</p>
+            <span class="btn-link">View Logo</span>
+        </a>
 
-            <!-- STERLING CARD -->
-            <a href="./sterling/sterling.html" class="card">
-                <div class="card-preview">
-                    <div class="sterling-mini-box">
-                        <div class="sterling-mini-icon"></div>
-                        <span class="sterling-mini-text">Sterling Bank</span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="card-title-wrap">
-                        <h2 class="card-title">Sterling Bank</h2>
-                        <span class="card-tag">Red & White</span>
-                    </div>
-                    <p class="card-description">Sterling Bank distinctive circular geometry logo design and typography composition.</p>
-                    <div class="card-action sterling-action">
-                        <span>View Design</span>
-                        <span class="arrow-icon">&rarr;</span>
-                    </div>
-                </div>
-            </a>
+        <a href="./sterling/sterling.html" class="bank-card">
+            <h2 class="bank-title sterling-title">Sterling</h2>
+            <p class="bank-desc">Sterling Bank Logo Design</p>
+            <span class="btn-link">View Logo</span>
+        </a>
 
-            <!-- UBA CARD -->
-            <a href="./UBA/uba.html" class="card">
-                <div class="card-preview">
-                    <div class="uba-mini-box">
-                        <div class="uba-mini-title">UBA</div>
-                        <div class="uba-mini-sub">United Bank for Africa</div>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="card-title-wrap">
-                        <h2 class="card-title">UBA</h2>
-                        <span class="card-tag">Crimson & White</span>
-                    </div>
-                    <p class="card-description">United Bank for Africa iconic red emblem logo display and typographic branding.</p>
-                    <div class="card-action uba-action">
-                        <span>View Design</span>
-                        <span class="arrow-icon">&rarr;</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; Nigerian Bank Logos Gallery &bull; Minimalist Clean Design System</p>
-    </footer>
+        <a href="./UBA/uba.html" class="bank-card">
+            <h2 class="bank-title uba-title">UBA</h2>
+            <p class="bank-desc">United Bank For Africa Logo Design</p>
+            <span class="btn-link">View Logo</span>
+        </a>
+    </div>
 </body>
 </html>
