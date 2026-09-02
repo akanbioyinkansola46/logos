@@ -1,12 +1,3 @@
-:root {
-    --bg-color: #0d1117;
-    --surface-color: #161b22;
-    --border-color: #30363d;
-    --text-primary: #f0f6fc;
-    --text-secondary: #8b949e;
-    --gtb-orange: orangered;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,102 +5,45 @@
 }
 
 body.gtbody {
-    background-color: var(--bg-color);
-    color: var(--text-primary);
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f4f6f9;
+    font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
-/* Header Navbar */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 32px;
-    background-color: var(--surface-color);
-    border-bottom: 1px solid var(--border-color);
+.top-nav {
+    padding: 20px 30px;
 }
 
-.nav-back {
-    color: var(--text-primary);
+.back-link {
+    display: inline-block;
+    color: #333333;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: color 0.2s ease;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
 }
 
-.nav-back:hover {
-    color: var(--gtb-orange);
-}
-
-.nav-switcher {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.switcher-label {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    font-weight: 500;
-}
-
-.nav-link {
-    color: var(--text-secondary);
-    text-decoration: none;
-    padding: 6px 14px;
-    border-radius: 6px;
-    font-size: 0.88rem;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-.nav-link:hover {
-    color: var(--text-primary);
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
-.nav-link.active {
+.back-link:hover {
+    background-color: orangered;
     color: #ffffff;
-    background-color: var(--gtb-orange);
+    border-color: orangered;
 }
 
-/* Main Content Layout */
-.content-container {
-    flex: 1;
-    max-width: 900px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 48px 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
+.main-container {
+    text-align: center;
+    margin-top: 40px;
 }
 
-.showcase-card {
-    background-color: var(--surface-color);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    width: 100%;
-    padding: 60px 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-
-/* GTBank Logo Geometry */
 .gtlogo {
     position: relative;
-    background-color: var(--gtb-orange);
+    background-color: orangered;
     width: 300px;
     height: 250px;
+    margin: 0 auto;
     border-radius: 4px;
-    box-shadow: 0 10px 25px rgba(255, 69, 0, 0.25);
 }
 
 .gtlogo2 {
@@ -118,7 +52,7 @@ body.gtbody {
     right: 40px;
     width: 60px;
     height: 70px;
-    background-color: #ffffff;
+    background-color: white;
 }
 
 .gttext {
@@ -128,61 +62,11 @@ body.gtbody {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 35px;
     font-weight: 500;
-    color: #ffffff;
-    letter-spacing: -0.5px;
+    color: white;
 }
 
 .gtmotto {
-    margin-top: 36px;
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    text-align: center;
-    letter-spacing: -0.01em;
-}
-
-/* Details Card */
-.details-card {
-    background-color: var(--surface-color);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    width: 100%;
-    padding: 28px 32px;
-}
-
-.details-section h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 12px;
-}
-
-.detail-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 0;
-    font-size: 0.95rem;
-}
-
-.detail-label {
-    color: var(--text-secondary);
-    font-weight: 500;
-}
-
-.detail-value {
-    color: var(--text-primary);
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.color-swatch {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border-radius: 4px;
+    margin-top: 30px;
+    font-size: 2rem;
+    color: #333333;
 }
